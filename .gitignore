@@ -18,7 +18,9 @@
 *.zip
 *.tar.gz
 *.rar
-
+*.lock
+*.bin
+*.ser
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 .gradle/5.6.4/fileHashes/fileHashes.lock
@@ -65,7 +67,6 @@ app/app.iml
 .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml
 .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml
 app/app.iml
-.gitignore
 .gradle/5.6.4/fileHashes/fileHashes.lock
 .idea/caches/build_file_checksums.ser
 .idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml
@@ -74,3 +75,26 @@ app/app.iml
 .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml
 .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml
 app/app.iml
+.gradle/5.6.4/executionHistory/executionHistory.bin
+.gradle/5.6.4/executionHistory/executionHistory.lock
+.gradle/5.6.4/fileHashes/fileHashes.bin
+.gradle/5.6.4/fileHashes/fileHashes.lock
+.gradle/5.6.4/fileHashes/resourceHashesCache.bin
+.gradle/5.6.4/javaCompile/classAnalysis.bin
+.gradle/5.6.4/javaCompile/jarAnalysis.bin
+.gradle/5.6.4/javaCompile/javaCompile.lock
+.gradle/5.6.4/javaCompile/taskHistory.bin
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/assetWizardSettings.xml
+.idea/caches/build_file_checksums.ser
+.gradle/5.6.4/executionHistory/executionHistory.bin
+.gradle/5.6.4/executionHistory/executionHistory.lock
+.gradle/5.6.4/fileHashes/fileHashes.bin
+.gradle/5.6.4/fileHashes/fileHashes.lock
+.gradle/5.6.4/fileHashes/resourceHashesCache.bin
+.gradle/5.6.4/javaCompile/classAnalysis.bin
+.gradle/5.6.4/javaCompile/jarAnalysis.bin
+.gradle/5.6.4/javaCompile/javaCompile.lock
+.gradle/5.6.4/javaCompile/taskHistory.bin
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/caches/build_file_checksums.ser
