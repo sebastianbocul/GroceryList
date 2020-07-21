@@ -12,11 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddNoteActivity extends AppCompatActivity {
+public class AddEditNoteActivity extends AppCompatActivity {
     public static final String EXTRA_TITILE="com.sebix.grocerylist.EXTRA_TITLE";
     public static final String EXTRA_DESCRIPTION="com.sebix.grocerylist.EXTRA_DESCRIPTION";
     public static final String EXTRA_PRIORITY="com.sebix.grocerylist.EXTRA_PRIORITY";
-
+    public static final String EXTRA_ID = "com.sebix.grocerylist.EXTRA_ID";
     private EditText editTextTitle;
     private EditText editTextDescritpion;
     private NumberPicker numberPickerPriority;
@@ -31,7 +31,17 @@ public class AddNoteActivity extends AppCompatActivity {
         numberPickerPriority.setMaxValue(10);
         numberPickerPriority.setMinValue(1);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
-        setTitle("Add note");
+
+        Intent intent = getIntent();
+        if(intent.hasExtra(EXTRA_ID)){
+            setTitle("Edit Note");
+            editTextTitle.setText(intent.getStringExtra(EXTRA_TITILE));
+            editTextDescritpion.setText(intent.getStringExtra(EXTRA_DESCRIPTION));
+            numberPickerPriority.setValue(intent.getIntExtra(EXTRA_PRIORITY,1));
+        }else {
+            setTitle("Add note");
+        }
+
     }
 
     @Override
@@ -64,6 +74,10 @@ public class AddNoteActivity extends AppCompatActivity {
         data.putExtra(EXTRA_TITILE,title);
         data.putExtra(EXTRA_DESCRIPTION,descritpion);
         data.putExtra(EXTRA_PRIORITY,priority);
+        int id = getIntent().getIntExtra(EXTRA_ID,-1);
+        if(id!=-1){
+            data.putExtra(EXTRA_ID,id);
+        }
         setResult(RESULT_OK,data);
         finish();
 
